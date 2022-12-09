@@ -1,5 +1,5 @@
 {
-  "name": "Shoowin",
+  "name": "hdscreen",
   "version": "2.3.1",
   "description": "Steaming made easier!",
   "main": "index.js",
@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/nare809/hdscreen.git"
   },
   "author": "Lazarus",
   "license": "ISC",
-  "homepage": "https://shoow.in",
+  "homepage": "https://www.hdscreen.online",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-class-properties": "^7.16.0",

@@ -43,7 +43,7 @@ function Homepage({
           <>
           <div className="main-blog anim" style={{ "--delay": ".1s" }}>
             <div className="main-blog__title">
-             You are now <br />Smashystream + User.
+             You are now <br />HdScreen + User.
             </div>
             <div className="main-blog__author">
               <div className="author-detail">

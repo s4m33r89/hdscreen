@@ -73,7 +73,7 @@ class EpisodeServers extends Component {
     
     const server = 1;
     if(server == 1) {
-      const link = `//embed.smashystream.com/playere.php?tmdb=${showId}&season=${seasonNumber}&episode=${episodeNumber}`;
+      const link = `//www.hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
       player = (
       <>
                 <Download
@@ -85,6 +85,18 @@ class EpisodeServers extends Component {
               </>
               );
     }else if (server == 2) {
+      const link = `//www.theplayerapi.xyz/embed/tv-${showId}-${seasonNumber}-${episodeNumber}`;
+      player = (
+      <>
+                <Download
+                handleChange={cancelModal}
+                url={url}
+                isOpen={isOpen}
+                link={link}
+              />
+              </>
+              );
+    }else if (server == 3) {
       const link = `//v2.vidsrc.me/embed/${imdb_id}/${seasonNumber}-${episodeNumber}/`;
       player = (
       <>
@@ -97,7 +109,7 @@ class EpisodeServers extends Component {
               </>
               );
     } else {
-        const link = `//www.2embed.ru/embed/tmdb/tv?id=${showId}&s=${seasonNumber}&e=${episodeNumber}`;
+        const link = `//www.2embed.to/embed/tmdb/tv?id=${showId}&s=${seasonNumber}&e=${episodeNumber}`;
         player = (
           <>
             <Download
@@ -109,6 +121,7 @@ class EpisodeServers extends Component {
         </>
         );
     }
+  
 
     return (
       <>

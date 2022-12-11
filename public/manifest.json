@@ -1,6 +1,6 @@
 {
-    "name": "Shoow!",
-    "short_name": "Shoow!",
+    "name": "HdScreen!",
+    "short_name": "HdScreen!",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -17,5 +17,5 @@
     "background_color": "#000000",
     "display": "standalone",
     "start_url": "/",
-    "description": "Shoow! is the future!"
+    "description": "HdScreen! is the future!"
 }

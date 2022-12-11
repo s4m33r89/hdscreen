@@ -79,7 +79,7 @@ class MovieServers extends Component {
     const isVideoOpen = isOpen ? "is-modal-active" : "";
     const server = 1;
     if (server == 1) {
-      const link = `//embed.smashystream.com/playere.php?imdb=${imdb}`;
+      const link = `//www.hdscreen.online/api/movie.php?imdb=${imdb}`;
       player = (
         <>
           <Download
@@ -91,7 +91,7 @@ class MovieServers extends Component {
         </>
       );
     } else if (server == 3) {
-      const link = `//olgply.com/api/?imdb=${imdb}`;
+      const link = `//5160.svetacdn.in/YaLsvISc5iCz?imdb_id=${imdb}&translation=381&poster=https://image.tmdb.org/t/p/original/${url}`;
       player = (
         <>
           <Download
@@ -115,7 +115,7 @@ class MovieServers extends Component {
             </>
             );
     } else if (server == 2) {
-      const link = `//5160.svetacdn.in/YaLsvISc5iCz?imdb_id=${imdb}&translation=381&poster=https://image.tmdb.org/t/p/original/${url}`;
+      const link = `//www.theplayerapi.xyz/embed/movie-${imdb}`;
       player = (
         <>
           <div
@@ -152,7 +152,7 @@ class MovieServers extends Component {
       );
     } else {
       // const link = `//5160.svetacdn.in/YaLsvISc5iCz?imdb_id=${imdb}&translation=381&poster=https://image.tmdb.org/t/p/original/${url}`;
-      const link = `//embed.smashystream.com/playere.php?imdb=${imdb}`;
+      const link = `//www.hdscreen.online/api/movie.php?imdb=${imdb}`;
       player = (
         <>
           <Download

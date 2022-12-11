@@ -4,14 +4,15 @@ import "firebase/auth";
 
 // Initialize Firebase
 const config = {
-    apiKey: "AIzaSyADpTL7X7--v5pY5bXQ6fBTkFaYmIMRc_A",
-    authDomain: "watchable-b5122.firebaseapp.com",
-    projectId: "watchable-b5122",
-    storageBucket: "watchable-b5122.appspot.com",
-    messagingSenderId: "631428649845",
-    appId: "1:631428649845:web:e16f4bfa00582d3b0c393c",
-    measurementId: "G-YGKE9YCVXT"
+    apiKey: "AIzaSyDLm72mZjvgiVqIPgrQV2Ka5jUF8rY4bVU",
+    authDomain: "smashyhit-156710.firebaseapp.com",
+    projectId: "smashyhit-156710",
+    storageBucket: "smashyhit-156710.appspot.com",
+    messagingSenderId: "186095291886",
+    appId: "1:186095291886:web:f8dbe9173ae71ef06352ff",
+    measurementId: "G-00KXDBF0GT"
 };
+
 const firebaseApp = firebase.initializeApp(config);
 
 // Initialize the Firestore database

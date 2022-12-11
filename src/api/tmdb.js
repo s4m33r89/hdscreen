@@ -2,7 +2,7 @@
  * This file contains helper functions to use TheMovieDB API
  */
 
-const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
+const API_KEY = process.env.TMDB_API_KEY;
 const baseImgUrl = "https://image.tmdb.org/t/p/";
 const baseUrl = "https://api.themoviedb.org/3";
 

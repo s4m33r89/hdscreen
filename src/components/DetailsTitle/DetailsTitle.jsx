@@ -53,11 +53,6 @@ function DetailsTitle({ movie }) {
 
   } = movie;
 
-
-  const displayName = title || name;
-  const displayDate = releaseDate || firstAirDate;
-  const titles = handleName(displayName);
-
 // Continue to Watch Feature
   useEffect(() => {
     localStorage.setItem('img', posterPath);
@@ -74,6 +69,7 @@ function DetailsTitle({ movie }) {
 
   let infoLine;
   let isMovie = false;
+   const displayDate = releaseDate || firstAirDate;
 
   // if title is defined, it's a movie
   if (title) {
@@ -177,6 +173,10 @@ function DetailsTitle({ movie }) {
       </>
     );
   }
+
+  const displayName = title || name;
+ 
+  const titles = handleName(displayName);
 
   return (
     <>

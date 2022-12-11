@@ -12,7 +12,7 @@ function DetailsBanner({ backdropPath }) {
     <div id="banner">
       <ImageWithFallback className="banner-img" src={backdropPath} />
       <div className="gradient" />
-      <div class="curve-edge"></div>
+      <div className="curve-edge"></div>
     </div>
   );
 }

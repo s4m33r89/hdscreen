@@ -77,9 +77,9 @@ class MovieServers extends Component {
     let player;
 
     const isVideoOpen = isOpen ? "is-modal-active" : "";
-    const server = localStorage.getItem("server_movie");
+    const server = 1;
     if (server == 1) {
-      const link = `//www.2embed.ru/embed/imdb/movie?id=${imdb}`;
+      const link = `//embed.smashystream.com/playere.php?imdb=${imdb}`;
       player = (
         <>
           <Download
@@ -152,7 +152,7 @@ class MovieServers extends Component {
       );
     } else {
       // const link = `//5160.svetacdn.in/YaLsvISc5iCz?imdb_id=${imdb}&translation=381&poster=https://image.tmdb.org/t/p/original/${url}`;
-      const link = `//www.2embed.ru/embed/imdb/movie?id=${imdb}`;
+      const link = `//embed.smashystream.com/playere.php?imdb=${imdb}`;
       player = (
         <>
           <Download

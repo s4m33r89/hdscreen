@@ -34,10 +34,10 @@ function MovieInformation({ currentMovie }) {
                       alt="No Picture"
                     />
                 </div>
-                  <p>
+            
                     <b className="name-border">{person.name}</b>
                     <br /><div class="name-border-hidden">{person.character}</div>
-                  </p>
+              
                 </Link>
               </div>
             );
@@ -50,10 +50,10 @@ function MovieInformation({ currentMovie }) {
                   src={`https://image.tmdb.org/t/p/w200/${person.profile_path}`}
                   alt={person.name}
                 />
-                <p>
+             
                   <b className="name-border">{person.name}</b>
                   <br /> <div class="name-border-hidden">{person.character}</div>
-                </p>
+            
               </Link>
             </div>
           );

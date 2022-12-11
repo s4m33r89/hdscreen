@@ -78,7 +78,7 @@ class Downloads extends Component {
       width="100%"
       height="100%"
       loading="lazy"
-      src={isOpen ? '/source.html?src=' + link : ""}
+      src={isOpen ? link : ""}
       onLoad={this.openIframe}
      // {...gg}
       />;
@@ -90,7 +90,7 @@ class Downloads extends Component {
           <div style={{display: this.state.display ? "" : "none"}}>
             <div class="bg-video" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/${url})`}}>
               {this.state.iframeLoaded ? PlayButton : Loading}
-              <div class="x">Pop-up advertising will appear. Please be patient! Thank you.</div>
+           
             </div>
           </div>
         {iframePlayer}

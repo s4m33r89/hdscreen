@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { getFullImgPath } from "../../api/tmdb";
 import Img from 'react-cool-img';
+import { getFullImgPath } from "../../api/tmdb";
 import "./ImageWithFallback.scss";
 
 /**
@@ -11,9 +11,9 @@ import "./ImageWithFallback.scss";
 function ImageWithFallback({ src, imgSize, mediaType, alt, className, notHD }) {
     const [showText, setshowText] = useState(false);
 
-    let infoLine;
-    infoLine = (<div class="overlay-text" style={showText ? {} : {display: 'none'}}>
-      <div class="overlay-text-rating">HD</div></div>);
+    
+    const infoLine = (<div className="overlay-text" style={showText ? {} : {display: 'none'}}>
+      <div className="overlay-text-rating">HD</div></div>);
 
   if (src) {
     // draggable is disabled in order to disallow only the image to be dragged
@@ -66,7 +66,7 @@ function ImageWithFallback({ src, imgSize, mediaType, alt, className, notHD }) {
 
 ImageWithFallback.defaultProps = {
   src: null,
-  imgSize: "original",
+  imgSize: "w780",
   alt: "",
   className: "",
   mediaType: "",

@@ -16,7 +16,11 @@ function checkProgress(movie) {
       </Link>
     );
   }
-  return movie.progress || "-";
+   return (
+      <Link to={`/movie/${movie.id}`}>
+        {movie.progress || "See progress"}
+      </Link>
+    );
 }
 
 function CardList({ entries, isEditMode, deleteEntry, onMove, isLoading }) {

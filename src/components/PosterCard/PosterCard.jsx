@@ -47,7 +47,7 @@ class PosterCard extends Component {
         <Link className="poster-card" to={linkTo || fallbackUrl} draggable>
             <ImageWithFallback
               src={posterPath}
-              imgSize="original"
+              imgSize="w500"
               notHD={notHD}
               mediaType={mediaType}
               alt={`Poster for ${title}`}

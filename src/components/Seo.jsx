@@ -9,7 +9,7 @@ const Seo = ({ title, pathSlug, crawl, coverImg, keywords, descriptions }) => {
 		
 	return (
 		<Helmet htmlAttributes={{ lang: 'en' }}>
-		<title>{title} | Shoow!</title>
+		<title>{title} | Smashystream</title>
 		<meta name="robots" content={isIndex} />
 		<link rel="canonical" href={currentURL} />
 		<meta name="description" content={descriptions} />
@@ -17,13 +17,13 @@ const Seo = ({ title, pathSlug, crawl, coverImg, keywords, descriptions }) => {
 
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={currentURL} />
-		<meta property="og:title" content={`${title} | Shoow!`} />
+		<meta property="og:title" content={`${title} | Smashystream`} />
 		<meta property="og:description" content={descriptions} />
 		<meta property="og:image" content={isCoverImg} />
 
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content={currentURL} />
-		<meta property="twitter:title" content={`${title} | Shoow!`} />
+		<meta property="twitter:title" content={`${title} | Smashystream`} />
 		<meta property="twitter:description" content={descriptions} />
 		<meta property="twitter:image" content={isCoverImg} />
 		</Helmet>

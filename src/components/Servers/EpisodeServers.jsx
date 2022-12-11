@@ -71,9 +71,9 @@ class EpisodeServers extends Component {
     const isVideoOpen = isOpen ? "is-modal-active" : "";
     let player;
     
-    const server = localStorage.getItem('server_series');
+    const server = 1;
     if(server == 1) {
-      const link = `//www.2embed.ru/embed/tmdb/tv?id=${showId}&s=${seasonNumber}&e=${episodeNumber}`;
+      const link = `//embed.smashystream.com/playere.php?tmdb=${showId}&season=${seasonNumber}&episode=${episodeNumber}`;
       player = (
       <>
                 <Download

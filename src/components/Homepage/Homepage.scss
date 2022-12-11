@@ -53,7 +53,7 @@
     -moz-background-size: 18%;
     -o-background-size: 18%;
     background-size: 18%;
-    background-color: #4784ff;
+    background-color: rgb(71 174 255 / 75%);
     background-position-x: 95%;
     background-position-y: 100%;
     background-blend-mode: overlay;
@@ -149,7 +149,7 @@
     -moz-background-size: 27%;
     -o-background-size: 27%;
     background-size: 27%;
-    background-color: #4784ff;
+    background-color: rgb(71 174 255 / 75%);
     background-position-x: 96%;
     background-blend-mode: overlay;
     display: flex;
@@ -237,7 +237,12 @@
   right: 20px;
   bottom: 20px;
 }
-
+.main-blog__time1 {
+  display: inline-flex;
+  position: absolute;
+ 
+  bottom: 20px;
+}
 .author-img {
   width: 52px;
   height: 52px;

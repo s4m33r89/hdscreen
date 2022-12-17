@@ -210,7 +210,7 @@ class MovieServers extends Component {
 }
 
 /**
- * 
+  
  *           <div class="change_link_icon" onClick={openLinks}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

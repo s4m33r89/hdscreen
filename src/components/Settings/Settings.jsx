@@ -21,14 +21,14 @@ class Settings extends Component {
     let series_name = localStorage.getItem('server_series');
     this.setState({ languagename: localStorage.getItem('language_eng') });
     if(movie_name == 1) {
-      this.setState({ movie: "VidCloud [Multi Quality, ADS, CC]" });
+      this.setState({ movie: "VidCloud [Multi Quality, No ADS, CC]" });
     } else if(movie_name == 2) {
-      this.setState({ movie: "Google Drive Player" });
+      this.setState({ movie: "iBomma" });
     } else if(movie_name == 4) {
       this.setState({ movie: "VidSrc PRO" });
     }
     if(series_name == 1) {
-      this.setState({ series: "VidCloud [Multi Quality, ADS, CC]" });
+      this.setState({ series: "VidCloud [Multi Quality, No ADS, CC]" });
     }
 
 
@@ -104,7 +104,7 @@ class Settings extends Component {
   }
 
   closeServers = () => {
-    this.setState({ openMovie: false });
+    this.setState({ openMovie: true });
   }
 
 
@@ -113,15 +113,15 @@ class Settings extends Component {
   }
 
   chooseServer1 = () => {
-    this.setState({ movie: "VidCloud [Multi Quality, ADS, CC]" });
+    this.setState({ movie: "VidCloud [Multi Quality, No ADS, CC]" });
     localStorage.setItem('server_movie', 1);
-    this.setState({ openMovie: false});
+    this.setState({ openMovie: true});
   }
 
   chooseServer2 = () => {
-    this.setState({ movie: "CloudPlayer [1080p, Ads, CC]" });
+    this.setState({ movie: "iBomma" });
     localStorage.setItem('server_movie', 2);
-     this.setState({ openMovie: false});
+     this.setState({ openMovie: true});
   }
 
   chooseServer3 = () => {
@@ -137,13 +137,13 @@ class Settings extends Component {
   }
 
   chooseServerSeries1 = () => {
-    this.setState({ series: "VidCloud [Multi Quality, ADS, CC]" });
+    this.setState({ series: "VidCloud [Multi Quality, No ADS, CC]" });
     localStorage.setItem('server_series', 1);
      this.setState({ openSeries: false});
   }
 
    chooseServerSeries2 = () => {
-    this.setState({ series: "VidSrc PRO" });
+    this.setState({ series: "iBomma" });
     localStorage.setItem('server_series', 2);
     this.setState({ openSeries: false});
   }
@@ -190,10 +190,6 @@ handleClick1 = (e, data) => {
       </div>
     </div>
   </div> }
-
-
-
-
 
       </div>
     );

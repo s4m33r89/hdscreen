@@ -103,11 +103,11 @@ function DetailsTitle({ movie }) {
           })}
         </div>
         <div className="video-p-sub">
-          {minutesToHours(runtime)}
+        <svg fill="#f2b01e" width="10" height="10" viewBox="0 0 512 512"><path d="M112.91 128A191.85 191.85 0 0 0 64 254c-1.18 106.35 85.65 193.8 192 194 106.2.2 192-85.83 192-192 0-104.54-83.55-189.61-187.5-192a4.36 4.36 0 0 0-4.5 4.37V152" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path><path d="m233.38 278.63-79-113a8.13 8.13 0 0 1 11.32-11.32l113 79a32.5 32.5 0 0 1-37.25 53.26 33.21 33.21 0 0 1-8.07-7.94z"></path></svg> {minutesToHours(runtime)}
           <span> • </span>
-          {moment(releaseDate).format("MMM Do YYYY")}
+          <svg viewBox="0 0 512 512" width="10" height="10" fill="#f2b01e"><rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" x="48" y="80" width="416" height="384" rx="48"></rect><title>calendar</title><circle cx="296" cy="232" r="24"></circle><circle cx="376" cy="232" r="24"></circle><circle cx="296" cy="312" r="24"></circle><circle cx="376" cy="312" r="24"></circle><circle cx="136" cy="312" r="24"></circle><circle cx="216" cy="312" r="24"></circle><circle cx="136" cy="392" r="24"></circle><circle cx="216" cy="392" r="24"></circle><circle cx="296" cy="392" r="24"></circle><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" stroke-linecap="round" d="M128 48v32m256-32v32"></path><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M464 160H48"></path></svg> {moment(releaseDate).format("YYYY")}
           <span> • </span> 
-          {rating} <svg fill="#ffff00" width="10" height="10" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
+          <svg fill="#ffff00" width="10" height="10" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg> {rating}
         </div>
       </div>
       </>
@@ -135,17 +135,16 @@ function DetailsTitle({ movie }) {
         </div>
         <div className="video-p-sub">
           <span class="video-p-data">
-            {minutesToHours(episodeRunTime[0])} per episode{" "}
+            {minutesToHours(episodeRunTime[0])} {" "}
           </span>
           <span class="video-p-data">
             • {numberOfEpisodes} episodes, {numberOfSeasons} seasons{" "}
           </span>
           <span class="video-p-data">• {status} </span>
           <span class="video-p-data">
-            • {moment(firstAirDate).format("YYYY")}-{endingYear}{" "} 
+            • {" "} {' '}<svg viewBox="0 0 512 512" width="10" height="10" fill="#f2b01e"><rect fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" x="48" y="80" width="416" height="384" rx="48"></rect><circle cx="296" cy="232" r="24"></circle><circle cx="376" cy="232" r="24"></circle><circle cx="296" cy="312" r="24"></circle><circle cx="376" cy="312" r="24"></circle><circle cx="136" cy="312" r="24"></circle><circle cx="216" cy="312" r="24"></circle><circle cx="136" cy="392" r="24"></circle><circle cx="216" cy="392" r="24"></circle><circle cx="296" cy="392" r="24"></circle><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" stroke-linecap="round" d="M128 48v32m256-32v32"></path><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M464 160H48"></path></svg> {" "} {' '}{moment(firstAirDate).format("YYYY")}-{endingYear}{" "} 
           </span>
           <span class="video-p-data">
-          {" "}• {rating}{" "}<svg fill="#ffff00" width="10" height="10" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"></path></svg>
           </span>
         </div>
       </div>

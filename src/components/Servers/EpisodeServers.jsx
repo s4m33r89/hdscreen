@@ -71,7 +71,7 @@ class EpisodeServers extends Component {
     const isVideoOpen = isOpen ? "is-modal-active" : "";
     let player;
     
-    const server = 1;
+    const server = localStorage.getItem('server_series');
     if(server == 1) {
       const link = `//www.hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
       player = (
@@ -85,19 +85,8 @@ class EpisodeServers extends Component {
               </>
               );
     }else if (server == 2) {
-      const link = `//www.theplayerapi.xyz/embed/tv-${showId}-${seasonNumber}-${episodeNumber}`;
-      player = (
-      <>
-                <Download
-                handleChange={cancelModal}
-                url={url}
-                isOpen={isOpen}
-                link={link}
-              />
-              </>
-              );
-    }else if (server == 3) {
-      const link = `//v2.vidsrc.me/embed/${imdb_id}/${seasonNumber}-${episodeNumber}/`;
+      // const link = `//www.theplayerapi.xyz/embed/tv-${showId}-${seasonNumber}-${episodeNumber}`;
+      const link = `//www.2embed.to/embed/tmdb/tv?id=${showId}&s=${seasonNumber}&e=${episodeNumber}`;
       player = (
       <>
                 <Download
@@ -109,7 +98,7 @@ class EpisodeServers extends Component {
               </>
               );
     } else {
-        const link = `//www.2embed.to/embed/tmdb/tv?id=${showId}&s=${seasonNumber}&e=${episodeNumber}`;
+        const link = `//www.hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
         player = (
           <>
             <Download
@@ -121,7 +110,6 @@ class EpisodeServers extends Component {
         </>
         );
     }
-  
 
     return (
       <>

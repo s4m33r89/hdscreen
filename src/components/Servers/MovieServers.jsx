@@ -77,7 +77,7 @@ class MovieServers extends Component {
     let player;
 
     const isVideoOpen = isOpen ? "is-modal-active" : "";
-    const server = 1;
+    const server = localStorage.getItem("server_movie");
     if (server == 1) {
       const link = `//www.hdscreen.online/api/movie.php?imdb=${imdb}`;
       player = (
@@ -91,7 +91,8 @@ class MovieServers extends Component {
         </>
       );
     } else if (server == 3) {
-      const link = `//5160.svetacdn.in/YaLsvISc5iCz?imdb_id=${imdb}&translation=381&poster=https://image.tmdb.org/t/p/original/${url}`;
+      // const link = `//www.theplayerapi.xyz/embed/movie-${imdb}`;
+      const link = `//www.2embed.to/embed/imdb/movie?id=${imdb}`;
       player = (
         <>
           <Download
@@ -115,7 +116,7 @@ class MovieServers extends Component {
             </>
             );
     } else if (server == 2) {
-      const link = `//www.theplayerapi.xyz/embed/movie-${imdb}`;
+      const link = `//5160.svetacdn.in/YaLsvISc5iCz?imdb_id=${imdb}&translation=381&poster=https://image.tmdb.org/t/p/original/${url}`;
       player = (
         <>
           <div
@@ -210,7 +211,7 @@ class MovieServers extends Component {
 }
 
 /**
-  
+ * 
  *           <div class="change_link_icon" onClick={openLinks}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

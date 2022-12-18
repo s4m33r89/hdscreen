@@ -85,8 +85,8 @@ class EpisodeServers extends Component {
               </>
               );
     }else if (server == 2) {
-      // const link = `//www.theplayerapi.xyz/embed/tv-${showId}-${seasonNumber}-${episodeNumber}`;
-      const link = `//www.2embed.to/embed/tmdb/tv?id=${showId}&s=${seasonNumber}&e=${episodeNumber}`;
+       const link = `https://theplayerapi.xyz/embed/tv-${showId}-${seasonNumber}-${episodeNumber}`;
+      // const link = `//www.2embed.to/embed/tmdb/tv?id=${showId}&s=${seasonNumber}&e=${episodeNumber}`;
       player = (
       <>
                 <Download

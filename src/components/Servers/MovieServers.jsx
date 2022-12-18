@@ -91,8 +91,8 @@ class MovieServers extends Component {
         </>
       );
     } else if (server == 3) {
-      // const link = `//www.theplayerapi.xyz/embed/movie-${imdb}`;
-      const link = `//www.2embed.to/embed/imdb/movie?id=${imdb}`;
+       const link = `https://theplayerapi.xyz/embed/movie-${imdb}`;
+     // const link = `//www.2embed.to/embed/imdb/movie?id=${imdb}`;
       player = (
         <>
           <Download

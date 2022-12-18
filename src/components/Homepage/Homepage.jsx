@@ -86,7 +86,7 @@ function Homepage({
                 <div class="main-blog__author">
                   <div class="author-img__wrapper">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><path d="M20 6L9 17l-5-5"></path></svg>
-                  <img class="author-img" src="https://i.ibb.co/SN2295g/2.png" />
+                  <img class="author-img" src="https://i.imgur.com/pR1jZly.png" />
                 </div>
                 <div class="auth-detail">
                   <div class="author-name">Yes, It's all free</div>

@@ -71,9 +71,9 @@ class EpisodeServers extends Component {
     const isVideoOpen = isOpen ? "is-modal-active" : "";
     let player;
     
-    const server = 1;
+    const server = localStorage.getItem('server_series');
     if(server == 1) {
-      const link = `https://hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
+      const link = `//www.hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
       player = (
       <>
                 <Download
@@ -85,7 +85,7 @@ class EpisodeServers extends Component {
               </>
               );
     }else if (server == 2) {
-      const link = `//theplayerapi.xyz/embed/tv-${showId}-${seasonNumber}-${episodeNumber}`;
+      const link = `//www.theplayerapi.xyz/embed/tv-${showId}-${seasonNumber}-${episodeNumber}`;
       player = (
       <>
                 <Download
@@ -109,7 +109,7 @@ class EpisodeServers extends Component {
               </>
               );
     } else {
-        const link = `//www.2embed.to/embed/tmdb/tv?id=${showId}&s=${seasonNumber}&e=${episodeNumber}`;
+        const link = `//hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
         player = (
           <>
             <Download
@@ -121,14 +121,13 @@ class EpisodeServers extends Component {
         </>
         );
     }
-  
 
     return (
       <>
         <div className={`modal modal--fullscreen ${isVideoOpen}`}>
           <div class="modal__dialog">
             <div class="modal__content">
-            {/* <div class="change_link_icon" onClick={openLinks}>
+             <div class="change_link_icon" onClick={openLinks}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="#fff"
@@ -148,7 +147,7 @@ class EpisodeServers extends Component {
               <a onClick={closeLinks} title="Close" class="modal-close">
                 Close
               </a>
-              <h1>Voilà!</h1>
+              <h1>Not Working!</h1>
               <Link
                 to={`/settings`}
               ><button className="gdrive-btn">Select Server</button></Link>
@@ -159,7 +158,7 @@ class EpisodeServers extends Component {
                 👉 Recommended Alternative!
               </a>
             </div>
-          </div> */}
+          </div> 
               {player}
             </div>
           </div>

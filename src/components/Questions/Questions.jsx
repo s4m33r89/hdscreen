@@ -18,10 +18,10 @@ class Questions extends Component {
     <input class="trigger-input" id="faq-titulo-11" type="checkbox" />
     <div class="trigger-wrapper">
       <label for="faq-titulo-11">
-        <h2 class="faq-titulo">What is Smashystream?</h2>
+        <h2 class="faq-titulo">What is HD Screen Project?</h2>
       </label>
       <p class="faq-conteudo">
-      <span style={{'color': '#4784ff'}}><b>Smashystream</b></span> another streaming site that delivers Movies and TV programs for free but it's not entirely legal. 
+      <span style={{'color': '#4784ff'}}><b>HD Screen</b></span> another streaming site that delivers Movies and TV programs for free but it's not entirely legal. 
       If you want better service in <b>legal way</b>. It's better to subcribe to <b>HBO, Netflix, Hulu, Amazon, Apple, Disney. </b>
        Go to theaters or rent a movies!</p>
     </div>
@@ -45,7 +45,7 @@ class Questions extends Component {
   <div class="lista-item">
     <input class="trigger-input" id="faq-titulo-2" type="checkbox" />
     <div class="trigger-wrapper">
-      <label for="faq-titulo-2"><h2 class="faq-titulo">How Smashystream works?</h2></label>
+      <label for="faq-titulo-2"><h2 class="faq-titulo">How HD Screen works?</h2></label>
       <p class="faq-conteudo">
         The contents being serve are from non-affiliated third-parties. [Vidcloud, Hydrax] The creator of the site are <b>not making any profits</b>. 
         All the advertisements (Ex. Pop-ups, Banners) are from the hosting site.</p>

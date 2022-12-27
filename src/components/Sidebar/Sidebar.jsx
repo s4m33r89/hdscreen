@@ -21,6 +21,7 @@ import WatchingIcon from "../../assets/watching.svg";
 import PlannedIcon from "../../assets/planned.svg";
 import CompletedIcon from "../../assets/completed.svg";
 import DroppedIcon from "../../assets/dropped.svg";
+import SignalIcon from  "../../assets/signal.svg";
 
 
 function Sidebar({ isOpen, handleChange, handleExpand }) {
@@ -75,8 +76,8 @@ function Sidebar({ isOpen, handleChange, handleExpand }) {
                   exact
                   to="/"
                 >
-                <HomeIcon fill="currentColor" />
-                <span className="side-text">Home</span>
+                <SignalIcon fill="currentColor" />
+                <span className="side-text">Explore</span>
                 </SidebarNavLink>
 
                 <SidebarNavLink to="/movies">
@@ -89,10 +90,7 @@ function Sidebar({ isOpen, handleChange, handleExpand }) {
                 <span className="side-text">TV-shows</span>
                 </SidebarNavLink>
 
-                <SidebarNavLink to="/settings">
-                <SettingsIcon fill="currentColor" />
-                <span className="side-text">Settings</span>
-                </SidebarNavLink>
+                
               </div>
             </div>
             <div className="side-wrapper">
@@ -101,6 +99,10 @@ function Sidebar({ isOpen, handleChange, handleExpand }) {
                 <Mobile>
                   <LoginHandler />
                 </Mobile>
+                <SidebarNavLink to="/settings">
+                <SettingsIcon fill="currentColor" />
+                <span className="side-text">Settings</span>
+                </SidebarNavLink>
                 <SidebarNavLink to="/help">
                   <HelpIcon fill="currentColor" />
                   <span className="side-text">Help Center</span>

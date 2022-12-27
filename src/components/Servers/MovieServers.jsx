@@ -79,7 +79,7 @@ class MovieServers extends Component {
     const isVideoOpen = isOpen ? "is-modal-active" : "";
     const server = localStorage.getItem("server_movie");
     if (server == 1) {
-      const link = `//www.hdscreen.online/api/movie.php?imdb=${imdb}`;
+      const link = `//hdscreen.online/api/movie.php?imdb=${imdb}`;
       player = (
         <>
           <Download
@@ -153,7 +153,7 @@ class MovieServers extends Component {
       );
     } else {
       // const link = `//5160.svetacdn.in/YaLsvISc5iCz?imdb_id=${imdb}&translation=381&poster=https://image.tmdb.org/t/p/original/${url}`;
-      const link = `//www.hdscreen.online/api/movie.php?imdb=${imdb}`;
+      const link = `//hdscreen.online/api/movie.php?imdb=${imdb}`;
       player = (
         <>
           <Download

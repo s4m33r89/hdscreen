@@ -73,7 +73,7 @@ class EpisodeServers extends Component {
     
     const server = 1;
     if(server == 1) {
-      const link = `//www.hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
+      const link = `//hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
       player = (
       <>
                 <Download

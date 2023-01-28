@@ -79,7 +79,7 @@ class MovieServers extends Component {
     const isVideoOpen = isOpen ? "is-modal-active" : "";
     const server = localStorage.getItem("server_movie");
     if (server == 1) {
-      const link = `//www.hdscreen.online/api/movie.php?imdb=${imdb}`;
+      const link = `//hdscreen.online/api/movie.php?imdb=${imdb}`;
       player = (
         <>
           <Download
@@ -90,9 +90,8 @@ class MovieServers extends Component {
           />
         </>
       );
-    } else if (server == 3) {
-       const link = `https://theplayerapi.xyz/embed/movie-${imdb}`;
-     // const link = `//www.2embed.to/embed/imdb/movie?id=${imdb}`;
+    } else if (server == 2) {
+      const link = `//www.2embed.to/embed/imdb/movie?id=${imdb}`;
       player = (
         <>
           <Download
@@ -103,8 +102,8 @@ class MovieServers extends Component {
           />
         </>
         );
-      } else if (server == 4) {
-        const link = `//v2.vidsrc.me/embed/${imdb}`;
+      } else if (server == 3) {
+        const link = `//theplayerapi.xyz/embed/${imdb}`;
           player = (
             <>
               <Download
@@ -115,8 +114,8 @@ class MovieServers extends Component {
               />
             </>
             );
-    } else if (server == 2) {
-      const link = `//5160.svetacdn.in/YaLsvISc5iCz?imdb_id=${imdb}&translation=381&poster=https://image.tmdb.org/t/p/original/${url}`;
+    } else if (server == 4) {
+      const link = `//v2.vidsrc.me/embed/${imdb}`;
       player = (
         <>
           <div
@@ -153,7 +152,7 @@ class MovieServers extends Component {
       );
     } else {
       // const link = `//5160.svetacdn.in/YaLsvISc5iCz?imdb_id=${imdb}&translation=381&poster=https://image.tmdb.org/t/p/original/${url}`;
-      const link = `//www.hdscreen.online/api/movie.php?imdb=${imdb}`;
+      const link = `//hdscreen.online/api/movie.php?imdb=${imdb}`;
       player = (
         <>
           <Download
@@ -170,7 +169,7 @@ class MovieServers extends Component {
         <div className={`modal modal--fullscreen ${isVideoOpen}`}>
           <div className="modal__dialog">
             <div className="modal__content">
-             <div class="change_link_icon" onClick={openLinks}>
+            {/* <div class="change_link_icon" onClick={openLinks}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="#fff"
@@ -190,18 +189,18 @@ class MovieServers extends Component {
               <a onClick={this.closeLinks} title="Close" class="modal-close">
                 Close
               </a>
-              <h1>Not Working!</h1>
+              <h1>Voilà!</h1>
               <Link
                 to={`/settings`}
               ><button className="gdrive-btn">Select Server</button></Link>
               <div>
-                <small>VidCloud, iBomma</small>
+                <small>VidCloud, Jplayer</small>
               </div>
               <a href="" target="_blank">
                 👉 Recommended Alternative!
               </a>
             </div>
-          </div>
+          </div> */}
           {player}</div>
           </div>
           </div>

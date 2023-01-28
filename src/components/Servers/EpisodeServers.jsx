@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import Download from "../Torrents/DownloadItem.jsx";
 import Player from '../Player/MoviePlayer';
@@ -73,7 +74,19 @@ class EpisodeServers extends Component {
     
     const server = localStorage.getItem('server_series');
     if(server == 1) {
-      const link = `//www.hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
+      const link = `//hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
+      player = (
+      <>
+                <Download
+                handleChange={cancelModal}
+                url={url}
+                isOpen={isOpen}
+                link={link}
+              />
+              </>
+              );
+    }else if (server == 3) {
+      const link = `//www.2embed.to/embed/tmdb/tv?id=${showId}&s=${seasonNumber}&e=${episodeNumber}`;      
       player = (
       <>
                 <Download
@@ -85,8 +98,8 @@ class EpisodeServers extends Component {
               </>
               );
     }else if (server == 2) {
-       const link = `https://theplayerapi.xyz/embed/tv-${showId}-${seasonNumber}-${episodeNumber}`;
-      // const link = `//www.2embed.to/embed/tmdb/tv?id=${showId}&s=${seasonNumber}&e=${episodeNumber}`;
+      // const link = `//v2.vidsrc.me/embed/${imdb_id}/${seasonNumber}-${episodeNumber}/`;
+      const link = `//theplayerapi.xyz/embed/${showId}-${seasonNumber}-${episodeNumber}/`;      
       player = (
       <>
                 <Download
@@ -98,7 +111,7 @@ class EpisodeServers extends Component {
               </>
               );
     } else {
-        const link = `//www.hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
+        const link = `//hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
         player = (
           <>
             <Download
@@ -116,7 +129,7 @@ class EpisodeServers extends Component {
         <div className={`modal modal--fullscreen ${isVideoOpen}`}>
           <div class="modal__dialog">
             <div class="modal__content">
-             <div class="change_link_icon" onClick={openLinks}>
+            {/* <div class="change_link_icon" onClick={openLinks}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="#fff"
@@ -136,7 +149,7 @@ class EpisodeServers extends Component {
               <a onClick={closeLinks} title="Close" class="modal-close">
                 Close
               </a>
-              <h1>Not Working!</h1>
+              <h1>Voilà!</h1>
               <Link
                 to={`/settings`}
               ><button className="gdrive-btn">Select Server</button></Link>
@@ -147,7 +160,7 @@ class EpisodeServers extends Component {
                 👉 Recommended Alternative!
               </a>
             </div>
-          </div> 
+          </div> */}
               {player}
             </div>
           </div>

@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import LoadingGrid from "../Loading/LoadingGrid";
 import PosterGrid from "../PosterGrid/PosterGrid";
-import { Link } from "react-router-dom";
+
 import { SignedIn, SignedOut } from "../UserState/UserState";
 import Seo from "../Seo";
 import "./Homepage.scss";
@@ -29,7 +30,7 @@ function Homepage({
   <>
   <Seo 
       title="Home" 
-      keywords="Free movies 2021, Google Drive Movies, Stream movies download, download movie collection, watch free movies in hd quality" 
+      keywords="Free movies 2022, Google Drive Movies, Stream movies download, download movie collection, watch free movies in hd quality" 
       descriptions="Discover a lot of latest/old movies & series collection and stream and download in HD Quality for free!"
     />
     <div id="homepage" className="container">
@@ -42,7 +43,7 @@ function Homepage({
           <>
           <div className="main-blog anim" style={{ "--delay": ".1s" }}>
             <div className="main-blog__title">
-             You are now <br />Shoow+ User.
+             You are now <br />HdScreen + User.
             </div>
             <div className="main-blog__author">
               <div className="author-detail">
@@ -79,7 +80,7 @@ function Homepage({
           <SignedOut>
           <div className="main-blog anim" style={{ "--delay": ".2s" }}>
             <div className="main-blog__title">
-                Discover the movies lighting up the charts in theaters, on streaming.
+                Discover the movies and TV shows and stream all free and unlimited.
             </div>
             <div className="main-blog__author">
               <div className="author-detail">
@@ -96,7 +97,7 @@ function Homepage({
               </div>
             </div>
             <div className="main-blog__time">
-              <Link className="buttongg" to="/movies/year/2021">
+              <Link className="buttongg" to="/movies/year/2022">
                 New Movies!
               </Link>
             </div>
@@ -107,15 +108,20 @@ function Homepage({
             </div>
             <div className="main-blog__author">
               <div className="author-detail">
-                <div className="author-name">Join to our official groups</div>
+                <div className="author-name">Join to our official telegram and discord groups </div>
                 <div className="author-info">
                   Invite Code <span className="seperate"></span> Freebies<span className="seperate"></span> Rewards
                 </div>
               </div>
             </div>
+             <div className="main-blog__time1">
+              <Link className="buttongg" to="https://t.me/+vekZX4KtMPtiYmRl">
+                Telegram
+              </Link>
+            </div>
             <div className="main-blog__time">
               <Link className="buttongg" to="/discord">
-                Let me In!
+               Discord
               </Link>
             </div>
           </div>
@@ -151,9 +157,9 @@ function Homepage({
             <div className="main-blog__title">Keep updated what's happening!</div>
             <div className="main-blog__author tips">
               <div className="main-blog__time">
-              <a className="buttongg">
-                <a href="https://discord.gg/d3YTR8RsA5" target="_blank">Discord</a>
-              </a>
+              
+                <a className="buttongg" href="https://discord.gg/yrMEckPEp3" target="_blank" rel="noreferrer">Discord</a>
+              
               </div>
               <div className="author-detail">
                 <div className="author-name">All the info are here</div>

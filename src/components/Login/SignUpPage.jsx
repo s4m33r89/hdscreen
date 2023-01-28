@@ -83,7 +83,7 @@ class SignUpPage extends Component {
                         <br />
                         <center>
                         <ReCaptchaV2
-                          sitekey="6Lf5j9AdAAAAAOR5YClZ4jED_5DF-ZZF2bExKE0l"
+                          sitekey="6Leo-DMkAAAAAL_Yz8E0sLTox0TiUGdnWG-qsSzc"
                           onChange={this.handleToken}
                           onExpire={this.handleExpire}
                           />

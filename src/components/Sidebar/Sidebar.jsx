@@ -15,14 +15,13 @@ import TvIcon from "../../assets/tv.svg";
 import SettingsIcon from "../../assets/settings.svg";
 import HelpIcon from "../../assets/help.svg";
 import DiscordIcon from "../../assets/discord.svg";
-import ExploreerIcon from "../../assets/explore.svg";
-import LandmarkIcon from  "../../assets/landmark.svg";
 
 // user lists icons [watching, planning, completed, dropped] 
 import WatchingIcon from "../../assets/watching.svg";
 import PlannedIcon from "../../assets/planned.svg";
 import CompletedIcon from "../../assets/completed.svg";
 import DroppedIcon from "../../assets/dropped.svg";
+import SignalIcon from  "../../assets/signal.svg";
 
 
 function Sidebar({ isOpen, handleChange, handleExpand }) {
@@ -30,7 +29,7 @@ function Sidebar({ isOpen, handleChange, handleExpand }) {
   const [sidebarState, sidebarVisible] = useState(true);
 
    useEffect(() => {
-        const pop_status = localStorage.getItem('sidebar-status');
+        let pop_status = localStorage.getItem('sidebar-status');
         if(pop_status) {
           sidebarVisible(true)
         } else {
@@ -59,7 +58,8 @@ function Sidebar({ isOpen, handleChange, handleExpand }) {
   const HomeActive = currentURL === "/" ? "sidebar-link is-active" : "sidebar-link";
 
   return (
-    <div id="sidebar" className={sidebarStatus}>
+    <F>
+      <div id="sidebar" className={sidebarStatus}>
         <div
           className={sidebarContent}
         >
@@ -76,7 +76,7 @@ function Sidebar({ isOpen, handleChange, handleExpand }) {
                   exact
                   to="/"
                 >
-                <ExploreerIcon fill="currentColor" />
+                <SignalIcon fill="currentColor" />
                 <span className="side-text">Explore</span>
                 </SidebarNavLink>
 
@@ -90,7 +90,7 @@ function Sidebar({ isOpen, handleChange, handleExpand }) {
                 <span className="side-text">TV-shows</span>
                 </SidebarNavLink>
 
-              
+                
               </div>
             </div>
             <div className="side-wrapper">
@@ -99,11 +99,9 @@ function Sidebar({ isOpen, handleChange, handleExpand }) {
                 <Mobile>
                   <LoginHandler />
                 </Mobile>
-                
-                
                 <SidebarNavLink to="/settings">
                 <SettingsIcon fill="currentColor" />
-                <span className="side-text">Settings</span>
+                <span className="side-text">Language</span>
                 </SidebarNavLink>
                 <SidebarNavLink to="/help">
                   <HelpIcon fill="currentColor" />
@@ -148,6 +146,7 @@ function Sidebar({ isOpen, handleChange, handleExpand }) {
           </div>
         </div>
       </div>
+    </F>
   );
 }
 

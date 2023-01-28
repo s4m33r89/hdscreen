@@ -1,6 +1,10 @@
 {
   "name": "hdscreen",
+<<<<<<< HEAD
   "version": "2.4.7",
+=======
+  "version": "2.3.1",
+>>>>>>> c30f213a1d9b6350418e146204954b05c03d740e
   "description": "Steaming made easier!",
   "main": "index.js",
   "scripts": {

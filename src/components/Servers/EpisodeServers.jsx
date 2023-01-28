@@ -72,9 +72,10 @@ class EpisodeServers extends Component {
     const isVideoOpen = isOpen ? "is-modal-active" : "";
     let player;
     
-    const server = localStorage.getItem('server_series');
+    const server = 1;
     if(server == 1) {
       const link = `//hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
+<<<<<<< HEAD
       player = (
       <>
                 <Download
@@ -87,6 +88,8 @@ class EpisodeServers extends Component {
               );
     }else if (server == 3) {
       const link = `//www.2embed.to/embed/tmdb/tv?id=${showId}&s=${seasonNumber}&e=${episodeNumber}`;      
+=======
+>>>>>>> c30f213a1d9b6350418e146204954b05c03d740e
       player = (
       <>
                 <Download
@@ -98,8 +101,24 @@ class EpisodeServers extends Component {
               </>
               );
     }else if (server == 2) {
+<<<<<<< HEAD
       // const link = `//v2.vidsrc.me/embed/${imdb_id}/${seasonNumber}-${episodeNumber}/`;
       const link = `//theplayerapi.xyz/embed/${showId}-${seasonNumber}-${episodeNumber}/`;      
+=======
+      const link = `//theplayerapi.xyz/embed/tv-${showId}-${seasonNumber}-${episodeNumber}`;
+      player = (
+      <>
+                <Download
+                handleChange={cancelModal}
+                url={url}
+                isOpen={isOpen}
+                link={link}
+              />
+              </>
+              );
+    }else if (server == 3) {
+      const link = `//v2.vidsrc.me/embed/${imdb_id}/${seasonNumber}-${episodeNumber}/`;
+>>>>>>> c30f213a1d9b6350418e146204954b05c03d740e
       player = (
       <>
                 <Download
@@ -111,7 +130,11 @@ class EpisodeServers extends Component {
               </>
               );
     } else {
+<<<<<<< HEAD
         const link = `//hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
+=======
+        const link = `//www.2embed.to/embed/tmdb/tv?id=${showId}&s=${seasonNumber}&e=${episodeNumber}`;
+>>>>>>> c30f213a1d9b6350418e146204954b05c03d740e
         player = (
           <>
             <Download
@@ -123,6 +146,7 @@ class EpisodeServers extends Component {
         </>
         );
     }
+  
 
     return (
       <>

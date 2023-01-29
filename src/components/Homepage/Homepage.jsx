@@ -11,7 +11,8 @@ import Announcement from "../Ads/Announcement";
 
 function Homepage({ 
   documentary, 
-  movies, 
+  movies,
+  network, 
   thriller, 
   kids, 
   series, 
@@ -131,6 +132,7 @@ function Homepage({
         {loadingMovies && <LoadingGrid grid="true" />}
         {!loadingMovies && <PosterGrid movies={movies} view="grid" type="movie" /> }
       </section>
+      
       <section>
       <h2>Top Thriller</h2>
         {loadingThriller && <LoadingGrid grid="true" />}

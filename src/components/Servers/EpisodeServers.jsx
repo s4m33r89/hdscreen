@@ -129,7 +129,7 @@ class EpisodeServers extends Component {
         <div className={`modal modal--fullscreen ${isVideoOpen}`}>
           <div class="modal__dialog">
             <div class="modal__content">
-            {/* <div class="change_link_icon" onClick={openLinks}>
+             <div class="change_link_icon" onClick={openLinks}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="#fff"
@@ -149,18 +149,18 @@ class EpisodeServers extends Component {
               <a onClick={closeLinks} title="Close" class="modal-close">
                 Close
               </a>
-              <h1>Voilà!</h1>
+              <h1>Not Working!</h1>
               <Link
                 to={`/settings`}
-              ><button className="gdrive-btn">Select Server</button></Link>
+              ><button className="gdrive-btn">Change Server</button></Link>
               <div>
-                <small>VidCloud, Jplayer</small>
+                <small>VidCloud, 2embed, iBomma</small>
               </div>
               <a href="" target="_blank">
                 👉 Recommended Alternative!
               </a>
             </div>
-          </div> */}
+          </div>
               {player}
             </div>
           </div>

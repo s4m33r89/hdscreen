@@ -101,7 +101,7 @@ function Sidebar({ isOpen, handleChange, handleExpand }) {
                 </Mobile>
                 <SidebarNavLink to="/settings">
                 <SettingsIcon fill="currentColor" />
-                <span className="side-text">Language</span>
+                <span className="side-text">Settings</span>
                 </SidebarNavLink>
                 <SidebarNavLink to="/help">
                   <HelpIcon fill="currentColor" />

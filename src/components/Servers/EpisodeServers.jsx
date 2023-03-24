@@ -99,7 +99,7 @@ class EpisodeServers extends Component {
               );
     }else if (server == 2) {
       // const link = `//v2.vidsrc.me/embed/${imdb_id}/${seasonNumber}-${episodeNumber}/`;
-      const link = `//theplayerapi.xyz/embed/${showId}-${seasonNumber}-${episodeNumber}/`;      
+      const link = `//hdscreen.online/embed/${showId}-${seasonNumber}-${episodeNumber}/`;      
       player = (
       <>
                 <Download

@@ -67,7 +67,7 @@ function Sidebar({ isOpen, handleChange, handleExpand }) {
             <span className="logo" onClick={showSidebar}>
               <SwitchIcon fill="currentColor" />
             </span>
-            <div className="logo-expand">HDScreen<HideIcon fill="currentColor" onClick={lessSidebar} width="15px" /></div>
+            <div className="logo-expand">iBomma<HideIcon fill="currentColor" onClick={lessSidebar} width="15px" /></div>
             <div className="side-wrapper">
               <div className="side-title">MENU</div>
               <div className="side-menu">

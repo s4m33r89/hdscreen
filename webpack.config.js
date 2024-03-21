@@ -10,22 +10,14 @@
  * Script to dev: webpack-dev-server --open --hot --inline
  */
 
-const WorkBoxPlugin = require('workbox-webpack-plugin');
-const { InjectManifest } = require('workbox-webpack-plugin');
-const path = require("path");
-const url = require("url");
 const { merge } = require("webpack-merge");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const InterpolateHtmlPlugin = require("interpolate-html-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const TerserJSPlugin = require("terser-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const path = require("path");
 const Dotenv = require("dotenv-webpack");
 const packagejson = require("./package.json");
 
-const production = process.env.NODE_ENV = "development";
+const production = process.env.NODE_ENV === "production";
 
 // file names of bundles
 const jsBundleName = "app.bundle.js";
@@ -58,35 +50,37 @@ const config = {
   },
   target: "web",
   module: {
-    rules: [{
-            test: /\.(js|jsx)$/,
-            exclude: /node_modules/,
-            use: {
-                loader: 'babel-loader'
-            }
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
         },
-    ]
-},
+      },
+    ],
+  },
   plugins: [new Dotenv({ systemvars: true })],
   resolve: {
-        extensions: ['.js', '.jsx']
-    }
+    extensions: [".js", ".jsx"],
+  },
 };
 
 let merged;
+// eslint-disable-next-line prefer-const
 merged = merge(config, {
-    output: {
-      publicPath: "/",
-    },
-    // sets process.env.NODE_ENV = "development" and shows module path names
-    mode: "development",
-    devtool: "eval-cheap-module-source-map",
-    devServer: {
-      hot: true,
-      historyApiFallback: true,
-      compress: true,
-      port: 9000,
-      static: {
+  output: {
+    publicPath: "/",
+  },
+  // sets process.env.NODE_ENV = "development" and shows module path names
+  mode: "development",
+  devtool: "eval-cheap-module-source-map",
+  devServer: {
+    hot: true,
+    historyApiFallback: true,
+    compress: true,
+    port: 9000,
+    static: {
       directory: path.resolve(__dirname, "public"),
       staticOptions: {},
       // Don't be confused with `devMiddleware.publicPath`, it is `publicPath` for static directory
@@ -99,42 +93,42 @@ merged = merge(config, {
       // Can be:
       // watch: {} (options for the `watch` option you can find https://github.com/paulmillr/chokidar)
       watch: true,
+    },
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(scss|css)$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "sass-loader" },
+        ],
       },
-    },
-    module: {
-      rules: [
-        {
-          test: /\.(scss|css)$/,
-          use: [
-            { loader: "style-loader" },
-            { loader: "css-loader" },
-            { loader: "sass-loader" },
-          ],
-        },
-        {
-          test: /\.svg$/,
-          use: ['@svgr/webpack'],
-        },
-      ],
-    },
-    plugins: [
-      new HtmlWebpackPlugin({
-        filename: htmlFile,
-        template: path.resolve(__dirname, `${contentBaseDir}/${htmlFile}`),
-      }),
-
-      // new WorkBoxPlugin.GenerateSW({
-      //  clientsClaim: true,
-      //  skipWaiting: true,
-      //}),
-      
-      // Makes the public URL available as %PUBLIC_URL% in index.html, e.g.:
-      // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-      // In development, this will be an empty string.
-      new InterpolateHtmlPlugin({
-        PUBLIC_URL: publicUrl,
-      }),
+      {
+        test: /\.svg$/,
+        use: ["@svgr/webpack"],
+      },
     ],
-  });
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: htmlFile,
+      template: path.resolve(__dirname, `${contentBaseDir}/${htmlFile}`),
+    }),
+
+    // new WorkBoxPlugin.GenerateSW({
+    //  clientsClaim: true,
+    //  skipWaiting: true,
+    // }),
+      
+    // Makes the public URL available as %PUBLIC_URL% in index.html, e.g.:
+    // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    // In development, this will be an empty string.
+    new InterpolateHtmlPlugin({
+      PUBLIC_URL: publicUrl,
+    }),
+  ],
+});
 
 module.exports = merged;

@@ -74,7 +74,7 @@ class EpisodeServers extends Component {
     
     const server = localStorage.getItem('server_series');
     if(server == 1) {
-      const link = `//hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
+      const link = `//ibooma.boats/watch/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
       player = (
       <>
                 <Download
@@ -111,7 +111,7 @@ class EpisodeServers extends Component {
               </>
               );
     } else {
-        const link = `//hdscreen.online/api/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
+        const link = `//localhost:9000/watch/tv.php?imdb=${imdb_id}&s=${seasonNumber}&e=${episodeNumber}`;
         player = (
           <>
             <Download

@@ -85,7 +85,7 @@
     "swr": "^1.0.1",
     "universal-cookie": "^4.0.4",
     "url-search-params-polyfill": "^8.1.1",
-    "use-dark-mode": "^2.3.1",
+    "dark-mode-toggle": "^0.15.0",
     "video.js": "^7.17.0",
     "videojs-landscape-fullscreen": "^11.33.0",
     "whatwg-fetch": "^3.6.2"

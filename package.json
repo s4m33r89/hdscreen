@@ -50,6 +50,10 @@
     "webpack-merge": "^5.8.0",
     "workbox-webpack-plugin": "^6.4.1"
   },
+  "peerDependencies": {
+  "react": "^16.13.1 || ^17.0.0",
+  "react-dom": "^16.13.1 || ^17.0.0"
+  },
   "dependencies": {
     "@noriginmedia/norigin-spatial-navigation": "^1.0.4",
     "@svgr/webpack": "^6.1.0",
